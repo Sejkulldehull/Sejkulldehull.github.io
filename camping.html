@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Camping Ö-Check</title>
+    <apple-mobile-web-app-capable></apple-mobile-web-app-capable>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --primary: #d32f2f; /* Österreich-Rot */
+            --accent: #2e7d32; /* Camping-Grün */
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            padding-bottom: 60px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 18px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            color: #222;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        .todo-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .todo-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            accent-color: var(--accent);
+        }
+        label {
+            font-size: 16px;
+            line-height: 1.3;
+        }
+        input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .info-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🇦🇹 Camping Ö-Check</h1>
+    <div class="subtitle">Deine Wohnwagen-Checkliste</div>
+
+    <h2>🎫 Maut & Österreich-Regeln</h2>
+    <div class="card">
+        <div class="todo-item">
+            <input type="checkbox" id="m1"><label for="m1">Digitale Vignette / Klebevignette für das Auto</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="m2"><label for="m2">Digitale Streckenmaut vorab gebucht (Brenner, Tauern etc.)</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="m3"><label for="m3">Warnwesten für JEDEN Insassen (griffbereit im Auto)</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="m4"><label for="m4">Verbandskasten (vollständig & gültig)</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="m5"><label for="m5">Warndreieck im Zugfahrzeug</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="m6"><label for="m6">Gewicht kontrolliert (Österreich wiegt streng!)</label>
+        </div>
+    </div>
+
+    <h2>🧯 Sicherheit & Technik</h2>
+    <div class="card">
+        <div class="todo-item">
+            <input type="checkbox" id="s1"><label for="s1">Feuerlöscher (mind. 2kg, griffbereit)</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="s2"><label for="s2">Löschdecke für die Küche</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="s3"><label for="s3">Zusatzspiegel am Auto montiert</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="s4"><label for="s4">Reifendruck bei Auto, Wohnwagen & Ersatzrad geprüft</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="s5"><label for="s5">Auffahrkeile, Stützplatten & Kurbel dabei</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="s6"><label for="s6">CEE-Kabeltrommel (25m) & Schuko-Adapter</label>
+        </div>
+    </div>
+
+    <h2>💧 Wasser, Gas & Verpflegung</h2>
+    <div class="card">
+        <div class="todo-item">
+            <input type="checkbox" id="v1"><label for="v1">Frischwassertank gereinigt & befüllt</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="v2"><label for="v2">Gasflaschen voll & zugedreht</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="v3"><label for="v3">Toilettenchemie & Camping-Toilettenpapier</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="v4"><label for="v4">Trinkwasser-Vorrat für die Fahrt</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="v5"><label for="v5">Getränke (Bier/Wein/Softdrinks) sicher verstaut</label>
+        </div>
+    </div>
+
+    <h2>🛑 Letzter Blick (Vor dem Losfahren)</h2>
+    <div class="card">
+        <div class="todo-item">
+            <input type="checkbox" id="l1"><label for="l1">Alle Dachluken und Fenster fest verriegelt?</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="l2"><label for="l2">Kühlschrank auf 12V & Tür verriegelt?</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="l3"><label for="l3">Alle Schränke & Schubladen im Wohnwagen zu?</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="l4"><label for="l4">Mover komplett von den Reifen weggeschwenkt?</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="l5"><label for="l5">Abreißseil korrekt angebracht?</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="l6"><label for="l6">Stützen komplett hochgekurbelt & Handbremse gelöst?</label>
+        </div>
+        <div class="todo-item">
+            <input type="checkbox" id="l7"><label for="l7">Licht-Check (Blinker, Bremse) erfolgreich?</label>
+        </div>
+    </div>
+
+    <div class="info-box">
+        🏔️ <strong>Berg-Tipp:</strong> Bei langen Gefällen regelmäßig Pausen machen, damit die Wohnwagen-Bremsen abkühlen können! Wildcampen ist in AT verboten.
+    </div>
+
+</body>
+</html>
